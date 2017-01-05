@@ -1,0 +1,5 @@
+name: 'Pager Example'
+type: module
+description: 'Demonstrates how to use table and render page elements to create paginated tables'
+package: 'Examples modules'
+core: 8.x

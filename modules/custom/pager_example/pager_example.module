@@ -1,0 +1,17 @@
+<?php
+
+/**
+ *
+ * Implements hook_theme().
+ *
+ * @return array
+ *  Returns a Drupal' render array.
+ */
+function pager_example_theme() {
+  return [
+    'pager_example_description' => [
+      'template' => 'description',
+      'variables' => [],
+    ]
+  ];
+}
