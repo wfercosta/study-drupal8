@@ -39,7 +39,7 @@ class CacheExampleForm extends FormBase {
   protected $cacheBackend;
 
   /**
-   * Dependecy injection through the constructor.
+   * Dependency injection through the constructor.
    *
    * @param \Symfony\Component\HttpFoundation\RequestStack $request_stack
    * @param \Drupal\Core\StringTranslation\TranslationInterface $translation
