@@ -3,18 +3,24 @@
 
 use Drupal\Component\Utility\Unicode;
 use Drupal\Core\Block\BlockPluginInterface;
+
 /**
  * Implements hook_block_view_alter().
  */
-function block_example_block_view_alter(array &$build) {
+function block_example_block_view_alter(array &$build, $block)
+{
 
-  $definition = $block->getPluginDefinition();
+    if (!$block)
+        return;
 
-  if ((!empty($build['#configuration']['label']) && stristr($build['#configuration']['label'], 'uppercase'))
-    || (!empty($definition['subject']) && stristr($definition['subject'], 'uppercase'))) {
+    $definition = $block->getPluginDefinition();
 
-    $build['#configuration']['label'] = Unicode::strtoupper($build['#configuration']['label']);
+    if ((!empty($build['#configuration']['label']) && stristr($build['#configuration']['label'], 'uppercase'))
+        || (!empty($definition['subject']) && stristr($definition['subject'], 'uppercase'))
+    ) {
 
-  }
+        $build['#configuration']['label'] = Unicode::strtoupper($build['#configuration']['label']);
+
+    }
 
 }

@@ -1,0 +1,5 @@
+name: 'Cache example'
+description: 'Demonstrates how to use Cache API'
+package: 'Examples module'
+type: module
+core: 8.x
